@@ -20,7 +20,7 @@ canvas.getElementsByClassName.cssText = `width: ${calculatedFontSize * grid.widt
 canvas.width = cellWidth * grid.width;
 canvas.height = cellHeight * grid.height;
 
-ctx.font = `normal ${fontSize}px Arial`;
+ctx.font = `normal ${fontSize}px Fira Code`;
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
 
@@ -32,3 +32,6 @@ export const drawChar = ({char, color, position}) => {
         position.y * cellHeight + cellHeight / 2
     );
 };
+
+export const clearCanvas = () =>
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
